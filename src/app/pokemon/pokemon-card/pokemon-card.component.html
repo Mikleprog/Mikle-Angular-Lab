@@ -1,1 +1,11 @@
-<p>pokemon-card works!</p>
+<div clas="container" *ngFor="let pokemon of pokemons"
+[pokemon]>
+  <!--<img src= "../../../assets/picture/{{pokemon.id}}.png">-->
+  <p>id {{pokemon.id}}</p>
+  <p>name {{pokemon.name}}</p>
+  <p>damage {{pokemon.damage}}</p>
+  <button (click)="status($event)">{{CatchOrRelease}}</button>
+</div>        
+
+ 
+ 

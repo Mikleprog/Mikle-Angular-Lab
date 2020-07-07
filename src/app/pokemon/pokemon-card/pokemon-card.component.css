@@ -1,0 +1,26 @@
+div {
+    width: 20%;
+    height:auto;
+    margin: 10px;
+    text-align: center;
+    font-size: large;
+    border: groove black;
+    border-radius: 10px;
+    max-height: 250px;
+    }
+
+img {
+    height:auto;
+    width: 100%;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+button {
+    color:white;
+    background-color: rgb(6, 64, 189);
+    padding: 15px 20px;
+    border-radius: 12px;
+    font-size: 20px;
+    object-position: bottom;
+  }
