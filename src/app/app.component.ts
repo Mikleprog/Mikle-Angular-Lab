@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-lab';
+  title = 'Angular-lab-Jun2020';
+  condition: boolean=true;
+  toggle(){
+    this.condition=!this.condition;
+  }
 }
