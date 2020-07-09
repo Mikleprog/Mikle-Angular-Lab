@@ -1,11 +1,32 @@
-<div clas="container" *ngFor="let pokemon of pokemons"
-[pokemon]>
-  <!--<img src= "../../../assets/picture/{{pokemon.id}}.png">-->
+<div class="box">
+<mat-grid-tile class="container" *ngFor="let pokemon of pokemons"
+[highlight]="pokemon.damage" >
+  <mat-card-header>ID {{pokemon.id}}</mat-card-header>
+  <br> 
+  <mat-card-title>Name {{pokemon.name}}</mat-card-title>
+  <br>
+  <mat-card-title>Damage {{pokemon.damage}}</mat-card-title>
+  <br>
+
+  <img src= "../../../assets/picture/{{pokemon.id}}.png">
+
+  <button (click)="status($event, pokemon)">{{pokemon.catchOrRelease}}</button>
+  
+
+</mat-grid-tile>
+</div>
+
+
+<!--<div clas="container"  
+*ngFor="let pokemon of pokemons"
+[highlight]="pokemon.damage"
+>
+ <img src= "../../../assets/picture/{{pokemon.id}}.png">
   <p>id {{pokemon.id}}</p>
   <p>name {{pokemon.name}}</p>
   <p>damage {{pokemon.damage}}</p>
-  <button (click)="status($event)">{{CatchOrRelease}}</button>
-</div>        
+  <button (click)="status($event, pokemon)">{{pokemon.catchOrRelease}}</button>
+</div>  -->
 
  
  

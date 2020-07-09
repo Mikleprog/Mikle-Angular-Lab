@@ -6,19 +6,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PokemonCardComponent } from './pokemon/pokemon-card/pokemon-card.component';
 import { PokemonListComponent } from './pokemon/pokemon-list/pokemon-list.component';
-
-
+import { HighlightDirective } from './highlight.directive';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from '@angular/material/slider';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent, PokemonCardComponent, PokemonListComponent
+    AppComponent, PokemonCardComponent, PokemonListComponent, HighlightDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NoopAnimationsModule,
+    MatSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

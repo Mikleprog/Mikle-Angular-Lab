@@ -15,3 +15,9 @@ button {
 }
 
 
+div {
+  display: block;
+  flex-wrap: wrap;
+  background-image:src= "../../../assets/picture/{{pokemon.id}}.png" ;
+
+}

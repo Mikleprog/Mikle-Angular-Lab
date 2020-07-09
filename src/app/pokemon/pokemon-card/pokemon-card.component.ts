@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { cards} from '../../testarray'
+import { Component, OnInit} from '@angular/core';
+import { cards, Card} from '../../testarray'
+
 
 @Component({
   selector: 'app-pokemon-card',
@@ -9,25 +10,23 @@ import { cards} from '../../testarray'
 export class PokemonCardComponent implements OnInit {
   pokemons=cards;
   condition: boolean=true;
+ // @Input() pokemon: any;
   
-  CatchOrRelease: string="Status";
-  status($event : any) : void {
+  catchOrRelease: string="Status";
+  status($event : any, pokemon:Card) : void {
   
     if(this.condition) {
       
-      this.CatchOrRelease="is caught";
-      console.log("Pokemon is caught");
+      pokemon.catchOrRelease=`is caught`;
+      console.log(`${pokemon.name}is caught`);
     } else {
-        this.CatchOrRelease="is released";
-        console.log("pokemon is released");
+        pokemon.catchOrRelease=`is released`;
+        console.log(`${pokemon.name} is released`);
       }  
 
     this.condition=!this.condition;
   }
-  /*increase($event : any) : void {
-    this.count++;
-    console.log($event);
-  */
+
   constructor() { }
 
   ngOnInit(): void {
