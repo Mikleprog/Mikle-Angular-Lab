@@ -1,0 +1,13 @@
+button {
+    color:white;
+    background-color: #369;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-size: 15px;
+  }
+  
+  
+  div {
+    display: block;
+    flex-wrap: wrap;
+  }

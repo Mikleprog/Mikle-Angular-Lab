@@ -7,8 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular-lab-Jun2020';
-  condition: boolean=true;
-  toggle(){
-    this.condition=!this.condition;
-  }
 }

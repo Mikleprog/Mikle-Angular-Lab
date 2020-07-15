@@ -1,0 +1,12 @@
+<button  (click)="toggle()">Toggle view</button>
+<hr>
+
+<div *ngIf="conditionForViev;else unset">
+  <app-pokemon-card (saveStatus)="changeStatus($event)"></app-pokemon-card>
+</div>
+
+<ng-template #unset> 
+ <app-pokemon-search></app-pokemon-search>
+ <app-pokemon-list (saveStatus)="changeStatus($event)"></app-pokemon-list>
+</ng-template> 
+

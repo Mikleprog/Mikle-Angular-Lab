@@ -6,7 +6,6 @@ export interface Card {
 }
 
 export  const cards: Card[] =[
- 
  {id: 160, name: 'Feraligatr', damage: 70, catchOrRelease: "Status"},
  {id: 179, name: 'Mareep', damage: 25, catchOrRelease: "Status"},
  {id: 180, name: 'Flaaffy', damage: 20, catchOrRelease: "Status"},

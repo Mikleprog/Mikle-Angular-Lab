@@ -1,5 +1,9 @@
 <ul class="pokemon">
    <li *ngFor="let pokemon of pokemons">
+
       <span class="badge">id {{pokemon.id}}</span> name {{pokemon.name}} damage {{pokemon.damage}}
-    </li>
+
+      <button (click)="status(pokemon)">{{pokemon.catchOrRelease}}</button>
+       <img src= "../../../assets/picture/{{pokemon.id}}.png">
+   </li>
 </ul>
