@@ -10,23 +10,8 @@
 
   <img src= "../../../assets/picture/{{pokemon.id}}.png">
 
-  <button (click)="status($event, pokemon)">{{pokemon.catchOrRelease}}</button>
+  <button (click)="status(pokemon)">{{pokemon.catchOrRelease}}</button>
   
 
 </mat-grid-tile>
 </div>
-
-
-<!--<div clas="container"  
-*ngFor="let pokemon of pokemons"
-[highlight]="pokemon.damage"
->
- <img src= "../../../assets/picture/{{pokemon.id}}.png">
-  <p>id {{pokemon.id}}</p>
-  <p>name {{pokemon.name}}</p>
-  <p>damage {{pokemon.damage}}</p>
-  <button (click)="status($event, pokemon)">{{pokemon.catchOrRelease}}</button>
-</div>  -->
-
- 
- 
