@@ -1,4 +1,5 @@
 <div>
-<input type="text" placeholder="Which pokemon do you want to finde?">
-<button >Search</button>
+  <input type="text" [(ngModel)]="pokemonName" placeholder="Which pokemon do you want to finde?">
+  <button (click)="search()" >Search</button>
+  
 </div>

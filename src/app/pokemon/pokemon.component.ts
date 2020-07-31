@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Card } from '../testarray';
+import { Card } from '../mock-array';
+
 
 @Component({
   selector: 'app-pokemon',
@@ -14,19 +15,6 @@ export class PokemonComponent implements OnInit {
     this.conditionForViev=!this.conditionForViev;
   }
   
-  changeStatus(pokemon:Card){
-    //console.log(pokemon.name);
-    if(pokemon.catchOrRelease=="Status"|| pokemon.catchOrRelease=="is released") {
-      
-      pokemon.catchOrRelease=`is caught`;
-      console.log(`${pokemon.name} is caught`);
-      return;
-    } else  {
-        pokemon.catchOrRelease=`is released`;
-        console.log(`${pokemon.name} is released`);
-    } 
-  }
-
   constructor() { }
 
   ngOnInit(): void {
