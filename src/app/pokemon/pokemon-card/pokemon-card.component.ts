@@ -1,26 +1,42 @@
-import { Component, OnInit, ChangeDetectionStrategy, Input, Output, EventEmitter} from '@angular/core';
-import { cards, Card} from '../../testarray'
+import {Component, OnInit, ChangeDetectionStrategy, Input, Output, EventEmitter} from '@angular/core';
+import { Card }  from '../../mock-array';
+import { PokemonService } from '../pokemon.service';
 
 
 @Component({
   selector: 'app-pokemon-card',
   templateUrl: './pokemon-card.component.html',
   styleUrls: ['./pokemon-card.component.css'],
-  //changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PokemonCardComponent implements OnInit {
  
-  pokemons=cards;
+  pokemons:Card[]=[];
+  name: string;
+  id: number;
+  selectedPokemon: Card;
  
- @Output() saveStatus = new EventEmitter<any>();
-  status(pokemon: Card): void{
-    
-     this.saveStatus.emit(pokemon);
+ 
+
+  constructor(private pokemonService: PokemonService) { }
+ 
+  ngOnInit(){
+    this.getPokemons();
+  
+  }
+  
+  getPokemons(): void {
+    this.pokemonService.getPokemons()
+    .subscribe(pokemons =>this.pokemons = pokemons)
   }
 
-  constructor() { }
-
-  ngOnInit(): void {
+  filter(name:string):void {
+    this.pokemons= this.pokemonService.filterByName(name);
+ }
+  
+  changeStatus(pokemon: Card): void {
+    this.pokemonService.changeStatus(pokemon);
   }
 
 }
+ 

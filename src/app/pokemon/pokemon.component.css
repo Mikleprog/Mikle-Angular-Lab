@@ -11,3 +11,7 @@ button {
     display: block;
     flex-wrap: wrap;
   }
+
+  .list {
+    width: 50%;
+  }

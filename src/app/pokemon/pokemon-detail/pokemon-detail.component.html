@@ -1,0 +1,20 @@
+
+<div *ngIf="pokemon" class="container" [highlight]="pokemon.damage">
+  <button class="buttonEdit"> Edit</button>
+  <hr>
+  <div class="box">
+    <img src= "../../../assets/picture/{{pokemon.id}}.png">
+    <div clas="colomn">
+      <div class="name">{{pokemon.name}}</div>
+      <div class="detail"> 
+          <li> Damage: {{pokemon.damage}}</li>
+          <li>Date: {{pokemon.date}}</li>
+          <li>ID: {{pokemon.id}}</li>
+      </div>
+      <button (click)="changeStatus(pokemon)" class="catchOrRelease" >{{pokemon.catchOrRelease}}</button>
+      <button (click)="goBack()" class="goback">go back</button>
+    </div>
+    
+  </div>  
+
+</div>

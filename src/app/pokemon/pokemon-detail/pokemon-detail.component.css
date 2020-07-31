@@ -1,0 +1,71 @@
+.container {
+  display: block;
+  border: solid pink;
+  width: 45%;
+  float: left;
+  position: relative;
+  margin:20px;
+
+  border-radius: 10px;
+  background-color: turquoise;
+}
+img {
+  width: 50%;
+}
+.box {
+ display:flex;
+}
+.colomn {
+  width: 60%;
+  display: block;
+  margin-top: 20px;
+
+}
+.name {
+  width: 180px;
+  height: 30px;
+  border: solid rgb(11, 241, 69);
+  border-radius: 10px;
+  margin: auto;
+  text-align: center;
+  text-transform: uppercase;
+  color: darkorchid;
+  font-size: 25px;
+  font-weight: bold;
+  padding-top: 5px;
+}
+
+.detail {
+  width: 90%;
+  display: block;
+  border: solid rgb(11, 241, 69);
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+button {
+  color:white;
+  background-color: rgb(6, 64, 189);
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 15px;
+  position: relative;
+  margin-bottom: 0px;
+  margin-top: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.goback {
+  font-size: 10px;
+  margin-top: 10px;
+  background-color: salmon;
+}
+.catchOrRelease {
+  margin: auto;
+  margin-top: 20px;
+  margin-left: 50px;
+}

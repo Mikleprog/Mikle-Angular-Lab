@@ -1,9 +1,17 @@
 <ul class="pokemon">
-   <li *ngFor="let pokemon of pokemons">
-
+  <app-pokemon-search (savePokemonName) = "filter($event)"></app-pokemon-search>
+   
+  <li *ngFor="let pokemon of pokemons">
+    
+    <a routerLink="/detail/{{pokemon.id}}">
       <span class="badge">id {{pokemon.id}}</span> name {{pokemon.name}} damage {{pokemon.damage}}
-
-      <button (click)="status(pokemon)">{{pokemon.catchOrRelease}}</button>
-       <img src= "../../../assets/picture/{{pokemon.id}}.png">
+    </a>
+   
+    <button (click)="changeStatus(pokemon)">{{pokemon.catchOrRelease}}</button>
+    <button (click)="edit(pokemon)">Edit</button>
+     <img src= "../../../assets/picture/{{pokemon.id}}.png">
    </li>
-</ul>
+   
+ </ul>
+
+
