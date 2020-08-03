@@ -3,12 +3,15 @@
    
   <li *ngFor="let pokemon of pokemons">
     
-    <a routerLink="/detail/{{pokemon.id}}">
+    <a routerLink="/pokemon/{{pokemon.id}}">
       <span class="badge">id {{pokemon.id}}</span> name {{pokemon.name}} damage {{pokemon.damage}}
     </a>
    
     <button (click)="changeStatus(pokemon)">{{pokemon.catchOrRelease}}</button>
-    <button (click)="edit(pokemon)">Edit</button>
+
+    <a routerLink="/pokemon/{{pokemon.id}}/edit">
+      <button (click)="edit(pokemon)">Edit</button>
+   </a>
      <img src= "../../../assets/picture/{{pokemon.id}}.png">
    </li>
    

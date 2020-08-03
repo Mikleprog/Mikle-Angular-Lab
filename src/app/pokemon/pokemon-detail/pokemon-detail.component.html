@@ -1,6 +1,8 @@
 
 <div *ngIf="pokemon" class="container" [highlight]="pokemon.damage">
-  <button class="buttonEdit"> Edit</button>
+  <a routerLink="/pokemon/{{pokemon.id}}/edit">
+    <button class="buttonEdit"> Edit</button>
+  </a>
   <hr>
   <div class="box">
     <img src= "../../../assets/picture/{{pokemon.id}}.png">
@@ -12,7 +14,9 @@
           <li>ID: {{pokemon.id}}</li>
       </div>
       <button (click)="changeStatus(pokemon)" class="catchOrRelease" >{{pokemon.catchOrRelease}}</button>
-      <button (click)="goBack()" class="goback">go back</button>
+      <a routerLink="/pokemon">
+        <button class="goback">go home</button>
+      </a>
     </div>
     
   </div>  

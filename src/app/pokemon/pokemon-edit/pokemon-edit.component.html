@@ -1,0 +1,47 @@
+<div *ngIf="pokemon" class="container" [highlight]="pokemon.damage">
+
+  <div class="box">
+
+    <img src= "../../../assets/picture/{{pokemon.id}}.png">
+    <div clas="colomn">
+      
+      <div class="detail"> 
+        <li> Name 
+          <!-- it could be easier to implement [[(ngModel)]="pokemon.name"] but there will be mistakes with CANCEL-->
+          <input class = "form-control" name="name" [(ngModel)]="pokemonName" 
+          placeholder="{{pokemon.name}}" #name="ngModel" required pattern="[a-zA-Z]+">
+        </li>
+        <div [hidden]="name.valid"  class="alert">
+          A name should be
+        </div>
+        <li> Damage 
+          <input class = "form-control" name="damage" [(ngModel)]="pokemonDamage" 
+          placeholder="{{pokemon.damage}}" #damage="ngModel" required pattern="^[1-9]\d*$">
+        </li>
+        <div [hidden]="damage.valid"  class="alert">
+          A damage should be
+        </div>
+        <li> Date
+          <input class = "form-control" name="date" [(ngModel)]="pokemonDate" 
+          placeholder="{{pokemon.date}}" #date="ngModel" required >
+        </li>
+        <div [hidden]="date.valid"  class="alert">
+          A date should be
+        </div>
+        <li>ID: {{pokemon.id}}</li>
+      </div>
+
+      <a routerLink="/pokemon/{{pokemon.id}}">
+        <button [disabled]="name.invalid||damage.invalid || date.invalid" (click)="saveEditPokemon()"
+         class="catchOrRelease" >Save</button>
+      </a>
+
+      <a routerLink="/pokemon/{{pokemon.id}}">     
+        <button (click)="cancel()" class="goback">Cancel</button>
+      </a>
+    </div>
+          
+  </div>  
+  
+</div>
+  
