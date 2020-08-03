@@ -43,8 +43,6 @@ export class PokemonDetailComponent implements OnInit {
     this.pokemonService.changeStatus(pokemon);
   }
 
-  goBack(): void {
-    this.location.back();
-  }
+  
 }
 

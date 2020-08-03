@@ -12,7 +12,9 @@ import { ProviderAst } from '@angular/compiler';
 import { PokemonService } from './pokemon.service';
 import { PokemonDetailComponent } from './pokemon-detail/pokemon-detail.component';
 import { PokemonRoutingModule } from './pokemon-routing.module';
-
+import { PokemonEditComponent } from './pokemon-edit/pokemon-edit.component';
+import { PokemonPopupComponent } from './pokemon-popup/pokemon-popup.component';
+import { ExitEditGuard } from './exit.edit.guard'
 
 @NgModule({
   declarations: [
@@ -21,7 +23,7 @@ import { PokemonRoutingModule } from './pokemon-routing.module';
     PokemonCardComponent, 
     PokemonSearchComponent, 
     HighlightDirective, 
-    PokemonDetailComponent],
+    PokemonDetailComponent, PokemonEditComponent, PokemonPopupComponent],
   imports: [
     CommonModule,
     BrowserModule,
@@ -29,6 +31,6 @@ import { PokemonRoutingModule } from './pokemon-routing.module';
     PokemonRoutingModule
   ],
   exports: [PokemonComponent],
-  providers: [PokemonService]
+  providers: [PokemonService, ExitEditGuard]
 })
 export class PokemonModule { }

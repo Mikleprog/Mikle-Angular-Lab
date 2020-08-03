@@ -1,6 +1,3 @@
-import { ActiveDescendantKeyManager } from '@angular/cdk/a11y';
-//import { stringify } from '@angular/compiler/src/util';
-//import { Injectable } from '@angular/core';
 import { CARDS, Card } from '../mock-array'
 import { Observable, of } from 'rxjs';
 
@@ -33,8 +30,6 @@ export class PokemonService {
         console.log(`${pokemon.name} is released`);
     } 
   }
-
-
 }
 
   
